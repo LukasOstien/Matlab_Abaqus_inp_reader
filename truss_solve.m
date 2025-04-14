@@ -110,6 +110,8 @@ switch check
     case 0
         clc
         fprintf('Aborted\n')
+        pause(2)
+        clc
         return
 end
 data = fopen(input_file);
@@ -240,7 +242,7 @@ while ~strcmp(tline,'*END STEP')
             tline = fgetl(data);
     end
 end
-pause(1)
+pause(1.5)
 fprintf('Abaqus file successfully processed.\n')
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -479,7 +481,7 @@ D_FULL(1:length(LOAD)) = D;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% CALCULATE ALL REACTION FORCES
 R_FULL = GLOBAL_FULL(2:size(GLOBAL_FULL,1),2:size(GLOBAL_FULL,1))*D_FULL;
-pause(1)
+pause(1.5)
 fprintf('System successfully analyzed. Displaying results:\n')
 pause(1)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -568,7 +570,7 @@ assignin('base','Local_Stiffness_Matrices',Local);
 assignin('base','Global_Stiffness_Matrix',GLOBAL_FULL);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-pause(1)
-fprintf('Process completed successfully.\n');
+pause(0.5)
+fprintf('Procedure completed successfully.\n');
 end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% END FUNCTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
