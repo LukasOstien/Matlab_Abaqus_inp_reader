@@ -1,4 +1,4 @@
-# Matlab_Abaqus_inp_reader
+# Matlab_Abaqus_inp_reader/solver
 this function aims to read any 2d truss described by an Abaqus .inp file and solve for global displacements, local displacements, local forces, local stresses, and reaction forces. As of now, it is still a work in progress. This current version only allows for all elements being the same material. Boundary conditions at an angle (ex: slanted rollers) have not been incorporated yet. The text file to be analyzed must follow the disclaimer mentioned in the script, which will be regurgitated here: <br />
 THE INPUT FILE MUST FOLLOW THIS SPECIFIC STRUCTURE IN ORDER TO READ IT PROPERLY: <br />
 % 01  <br />
